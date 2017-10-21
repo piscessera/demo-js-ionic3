@@ -1,0 +1,40 @@
+<ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="img/slimer.png">
+        </ion-avatar>
+        <h2>Slimer</h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary">
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  Thumbnail List
+  Demo Source
+  Item thumbnails showcase an image that takes up the entire height of an item. To use a thumbnail, add an <ion-thumbnail> component inside of an item. The position of the thumbnail can be set using the item-left and item-right attributes:
+  
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>My Neighbor Totoro</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
