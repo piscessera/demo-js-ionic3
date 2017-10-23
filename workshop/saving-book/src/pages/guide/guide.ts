@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, MenuController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the GuidePage page.
@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GuidePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menu: MenuController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GuidePage');
+    this.menu.enable(false); // hide side menu
   }
 
+  skip() {
+    this.navCtrl.setRoot('LoginPage');
+  }
 }

@@ -10,7 +10,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = 'HomePage';
+  rootPage: any = 'GuidePage';
 
   pages: Array<{title: string, component: any}>;
 
@@ -20,7 +20,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: 'HomePage' },
-      { title: 'About', component: 'AboutPage' }
+      { title: 'About', component: 'AboutPage' },
+      { title: 'Logout', component: 'LoginPage' }
     ];
 
   }
@@ -35,8 +36,6 @@ export class MyApp {
   }
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
 }

@@ -22,4 +22,8 @@ export class NewAccountPage {
     console.log('ionViewDidLoad NewAccountPage');
   }
 
+  register() {
+    this.navCtrl.setRoot('HomePage');
+  }
+
 }

@@ -4,15 +4,47 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-card>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-card-content (click)="viewDetail()">
+      <ion-card-title>
+       Wallet CNX
+      </ion-card-title>
+      <div class="summary">
+        <span class="spend">0$</span> : <span class="receive">0$</span>
+      </div>
+    </ion-card-content>
+
+    <div class="book" text-center (click)="viewDetail()" >
+        <img src="assets/imgs/ic_wallet.png"/>
+    </div>
+
+    <!-- Remove this wallet -->
+    <ion-item class="bottom-bar" text-right>
+        <ion-icon name="trash" (click)="remove()" ></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <!-- Add new wallet icon -->
+  <ion-grid padding class="button-new-wallet" >
+    <ion-row>
+      <ion-col col-9 class="label">
+          No wallet! Add new here ->
+      </ion-col>
+      <ion-col col-3>
+        <img width="60" height="60" src="assets/imgs/ic_wallet.png" alt="Wallet" (click)="newWallet()" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
