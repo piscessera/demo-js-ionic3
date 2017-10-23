@@ -14,12 +14,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'wallet-detail.html',
 })
 export class WalletDetailPage {
+  tab1;
+  tab2;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.tab1 = 'WalletDetailTransactionPage';
+    this.tab2 = 'WalletDetailManagePage';
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WalletDetailPage');
+  }
+
+  add() {
+    this.navCtrl.push('AddTransactionPage');
   }
 
 }

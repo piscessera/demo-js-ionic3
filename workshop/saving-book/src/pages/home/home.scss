@@ -1,3 +1,33 @@
 page-home {
-
+    .button-new-wallet {    
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        .label {
+            text-align: right;
+            vertical-align: middle;
+            padding-top: 30px;
+        }
+    }
+    ion-card {
+        .summary {
+            .spend {
+                color: red;
+            }
+            .receive {
+                color: chartreuse;
+            }
+        }
+        .book {
+            img {
+                width: 100px;
+                height: 100px;
+                display: initial;
+            }
+        }
+    }
+    ion-item.bottom-bar {
+            border-top: 1px solid #EEE;
+    }
+    
 }

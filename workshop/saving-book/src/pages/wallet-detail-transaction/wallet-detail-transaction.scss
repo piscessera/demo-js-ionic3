@@ -1,0 +1,32 @@
+page-wallet-detail-transaction {
+    ion-card {
+        .summary {
+            .spend {
+                color: red;
+            }
+            .receive {
+                color: chartreuse;
+            }
+        }
+        .book {
+            img {
+                width: 100px;
+                height: 100px;
+                display: initial;
+            }
+        }
+    }
+    div.scroll-content {
+        margin-top: 230px !important;
+
+        ion-list {
+    
+            ion-item.spend ion-icon{
+                color: red;
+            }
+            ion-item.receive ion-icon{
+                color: chartreuse;
+            }
+        }
+    }
+}

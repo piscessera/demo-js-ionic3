@@ -1,0 +1,19 @@
+page-wallet-detail-manage {
+    ion-card {
+        .summary {
+            .spend {
+                color: red;
+            }
+            .receive {
+                color: chartreuse;
+            }
+        }
+        .book {
+            img {
+                width: 100px;
+                height: 100px;
+                display: initial;
+            }
+        }
+    }
+}

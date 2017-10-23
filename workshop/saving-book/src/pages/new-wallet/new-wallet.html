@@ -7,12 +7,31 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>NewWallet</ion-title>
+    <ion-title>New Wallet</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-list>
+      <ion-item text-center >
+        <img width="100" height="100" src="assets/imgs/ic_wallet.png"/>
+      </ion-item>
+      <ion-item>
+        <button ion-button block color="light" >Upload Image..</button>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Wallet Name</ion-label>
+        <ion-input type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Active</ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  
+    <div padding>
+        <button ion-button color="primary" block (click)="save()">Save</button>
+    </div>
 </ion-content>

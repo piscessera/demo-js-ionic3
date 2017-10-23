@@ -7,12 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>WalletDetail</ion-title>
+    <ion-title>Wallet Detail</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="primary" (click)="add()">
+        <ion-icon name="ios-add-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
-
-<ion-content padding>
-
-</ion-content>
+<ion-tabs>
+  <ion-tab tabIcon="list" tabTitle="Transaction" [root]="tab1"></ion-tab>
+  <ion-tab tabIcon="settings" tabTitle="Manage" [root]="tab2"></ion-tab>
+</ion-tabs>

@@ -14,5 +14,30 @@
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Display Name</ion-label>
+      <ion-input type="text" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Birthday</ion-label>
+      <ion-input type="date" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="email" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Confirm Password</ion-label>
+      <ion-input type="password" ></ion-input>
+    </ion-item>
+  </ion-list>
 
+  <div padding>
+      <button ion-button color="primary" block (click)="register()">Register</button>
+  </div>
 </ion-content>
