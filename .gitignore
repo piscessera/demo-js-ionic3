@@ -56,3 +56,6 @@ typings/
 
 # dotenv environment variables file
 .env
+workshop/saving-book/www/build/
+
+workshop/saving-book/\.sourcemaps/
