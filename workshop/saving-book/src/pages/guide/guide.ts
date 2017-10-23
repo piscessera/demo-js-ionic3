@@ -22,4 +22,7 @@ export class GuidePage {
     console.log('ionViewDidLoad GuidePage');
   }
 
+  skip() {
+    this.navCtrl.setRoot('LoginPage');
+  }
 }

@@ -1,3 +1,8 @@
 page-guide {
-
+    .skip {
+        position: absolute;
+        float: right;
+        z-index: 2; // set element index to higher than base element of slide
+        right: 0;
+    }
 }
