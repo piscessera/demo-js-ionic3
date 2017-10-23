@@ -1,1 +1,2 @@
-workshop/saving-book/node_modules/
+/workshop/saving-book/node_modules/
+**/node_modules/
