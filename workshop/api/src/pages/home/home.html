@@ -17,12 +17,18 @@
   <ion-item>
     Tasks
   </ion-item>
-  <ion-list>
+  <ion-list *ngFor="let item of items">
 
     <ion-item>
-      <div>Name: Name</div>
-      <div>Status: Status</div>
-      <ion-icon item-end name="create" (click)="edit()"></ion-icon>
+      <div>Name: {{ item.name }}</div>
+      <div>Status: {{ item.status }}</div>
+      <img item-start 
+        width="128" height="128" 
+        src="{{ item.image }}" 
+        (click)="open(item.url)"/>
+
+      <ion-icon item-end name="share" (click)="share(item)"></ion-icon>
+      <ion-icon item-end name="create" (click)="edit(item)"></ion-icon>
       <ion-icon item-end name="remove-circle" (click)="remove()"></ion-icon>
     </ion-item>
 

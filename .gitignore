@@ -61,3 +61,7 @@ workshop/saving-book/www/build/
 workshop/saving-book/\.sourcemaps/
 
 workshop/api/www/build/
+
+workshop/api/\.sourcemaps/
+
+workshop/api/platforms/

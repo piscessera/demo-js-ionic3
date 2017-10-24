@@ -16,14 +16,21 @@
 <ion-content padding>
   <ion-item>
     <ion-label>Name</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input 
+      type="text" 
+      [(ngModel)] = "item.name"
+      >
+    </ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Status</ion-label>
-    <ion-select [(ngModel)]="gaming">
-      <ion-option value="new">New</ion-option>
-      <ion-option value="in-progress">In Progress</ion-option>
-      <ion-option value="complete">Complete</ion-option>
+    <ion-select [(ngModel)]="item.status">
+      <ion-option value="new" 
+        >New</ion-option>
+      <ion-option value="in progress" 
+        >In Progress</ion-option>
+      <ion-option value="complete" 
+        >Complete</ion-option>
     </ion-select>
   </ion-item>
   <button ion-button (click)="save()">Save</button>

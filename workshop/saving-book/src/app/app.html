@@ -11,7 +11,12 @@
         {{p.title}}
       </button>
     </ion-list>
+
+    <div *ngFor="let p of pages" (click)="openPage(p)">
+      Menu: {{p.title}}
+    </div>
   </ion-content>
+
 
 </ion-menu>
 

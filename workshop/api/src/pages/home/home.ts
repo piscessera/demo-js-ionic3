@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ToastController, AlertController, IonicPage, NavController, NavParams } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
+import 'rxjs/add/operator/map';
+
+import { TasksService } from '../../services/tasks.service';
 
 /**
  * Generated class for the HomePage page.
@@ -14,16 +20,43 @@ import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angu
   templateUrl: 'home.html',
 })
 export class HomePage {
+  items: any = [];
 
-  constructor(public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public toastCtrl: ToastController,
+    public alertCtrl: AlertController, 
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public taskService: TasksService,
+    public inAppBrowser: InAppBrowser,
+    public socialShare: SocialSharing
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+    // this.taskService.list().subscribe((res) => {
+    //   console.log(res);
+    //   this.items = res;
+    // });
   }
 
-  edit() {
-    this.navCtrl.push('EditPage');
+  ionViewWillEnter() {
+    this.taskService.list().subscribe((res) => {
+      console.log(res);
+      this.items = res;
+    }, (err) => {
+      let toast = this.toastCtrl.create({
+        message: "Can't connect service",
+        duration: 3000
+      });
+      toast.present();
+    });
+  }
+
+  edit(item) {
+    console.log(item);
+    this.navCtrl.push('EditPage', { item });
   }
 
   remove() {
@@ -46,5 +79,24 @@ export class HomePage {
       ]
     });
     confirm.present();
+  }
+
+  open(url) {
+    // this.inAppBrowser.create(url, '_system');
+    this.inAppBrowser.create(url, '_blank');
+  }
+
+  share(item){
+    this.socialShare.share(
+      'Hello Ionic',
+      item.name,
+      item.image,
+      item.url
+    )
+    .then(function() {
+      console.log('Successful share');
+    }).catch(function(error) {
+      console.log('Error sharing:', error)
+    });
   }
 }

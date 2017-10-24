@@ -15,12 +15,15 @@ import { IonicPage, NavController, MenuController, NavParams } from 'ionic-angul
 })
 export class GuidePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public menu: MenuController) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public menu: MenuController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GuidePage');
-    this.menu.enable(false); // hide side menu
+    //this.menu.enable(false); // hide side menu
   }
 
   skip() {

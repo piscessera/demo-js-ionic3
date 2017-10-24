@@ -17,16 +17,18 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Username</ion-label>
-      <ion-input type="email" ></ion-input>
+      <ion-input type="text" ></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Password</ion-label>
       <ion-input type="password" ></ion-input>
     </ion-item>
+    <label>Email: </label>
+    <input type="text"/>
   </ion-list>
 
   <div padding>
       <button ion-button color="primary" block (click)="login()">Log In</button>
-      <button ion-button color="secondary" block (click)="newAccount()">New Account</button>
+      <button ion-button color="mfu" block (click)="newAccount()">New Account</button>
   </div>
 </ion-content>

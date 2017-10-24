@@ -41,6 +41,8 @@ exports.update_a_task = function(req, res) {
   var target = data[0];
   target.name = req.body.name;
   target.status = req.body.status;
+  target.image = req.body.image;
+  target.url = req.body.url;
 
   data = task.update(target);
 
